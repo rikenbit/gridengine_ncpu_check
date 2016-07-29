@@ -1,9 +1,6 @@
 #!/bin/bash
 declare -A TOTAL
 TOTAL=()
-#QHOSTJ=`qhost -j`
-#echo -e $($QHOSTJ)
-#exit
 qhost -j | sed -e "\$a END" | tail -n +3 |  grep -v ^"\s"*job | grep -v ^"\s"*------ |  while read LINE;
 do 
   HOST=$(echo ${LINE} | awk '{print $1;}' | grep  -v ^'[0-9]')
