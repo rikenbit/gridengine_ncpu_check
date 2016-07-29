@@ -7,7 +7,7 @@ do
   RET=$?
   if [ ${RET} -eq 0  ]; then
     for i in ${!TOTAL[@]}; do
-      echo "[$i]=>[${TOTAL[$i]}]"
+      echo "[$i]=>[${TOTAL[$i]}] NCPU"
     done
     echo 
     echo "$LINE"
