@@ -1,3 +1,3 @@
 #!/bin/bash
 
-qhost -j
+qhost -j | tail -n +3
